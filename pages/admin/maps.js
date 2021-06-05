@@ -99,7 +99,7 @@ function Maps() {
     <>
       <Header />
       {/* Page content */}
-      <Container className="mt--7" fluid>
+      {/* <Container className="mt--7" fluid>
         <Row>
           <div className="col">
             <Card className="shadow border-0">
@@ -107,7 +107,7 @@ function Maps() {
             </Card>
           </div>
         </Row>
-      </Container>
+      </Container> */}
     </>
   );
 }

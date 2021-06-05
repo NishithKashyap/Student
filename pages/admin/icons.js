@@ -21,9 +21,9 @@ const Icons = () => {
   return (
     <>
       <Header />
-      {/* Page content */}
+      {/* Page content
       <Container className="mt--7" fluid>
-        {/* Table */}
+        
         <Row>
           <div className="col">
             <Card className="shadow">
@@ -2763,7 +2763,7 @@ const Icons = () => {
             </Card>
           </div>
         </Row>
-      </Container>
+      </Container> */}
     </>
   );
 };

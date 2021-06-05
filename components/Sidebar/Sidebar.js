@@ -7,17 +7,11 @@ import { PropTypes } from "prop-types";
 
 // reactstrap components
 import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
   Collapse,
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
   DropdownToggle,
-  FormGroup,
   Form,
   Input,
   InputGroupAddon,
@@ -29,32 +23,28 @@ import {
   NavItem,
   NavLink,
   Nav,
-  Progress,
-  Table,
   Container,
   Row,
   Col,
 } from "reactstrap";
 
-var ps;
-
 function Sidebar(props) {
-  // used for checking current route
+
   const router = useRouter();
   const [collapseOpen, setCollapseOpen] = React.useState(false);
-  // verifies if routeName is the one active (in browser input)
+
   const activeRoute = (routeName) => {
     return router.route.indexOf(routeName) > -1;
   };
-  // toggles collapse between opened and closed (true/false)
+
   const toggleCollapse = () => {
     setCollapseOpen(!collapseOpen);
   };
-  // closes the collapse
+
   const closeCollapse = () => {
     setCollapseOpen(false);
   };
-  // creates the links that appear in the left menu / Sidebar
+
   const createLinks = (routes) => {
     return routes.map((prop, key) => {
       return (
@@ -217,39 +207,10 @@ function Sidebar(props) {
           </Form>
           {/* Navigation */}
           <Nav navbar>{createLinks(routes)}</Nav>
+
           {/* Divider */}
           <hr className="my-3" />
-          {/* Heading */}
-          <h6 className="navbar-heading text-muted">Documentation</h6>
-          {/* Navigation */}
-          <Nav className="mb-md-3" navbar>
-            <NavItem>
-              <NavLink href="https://www.creative-tim.com/learning-lab/nextjs/overview/argon-dashboard?ref=njsad-admin-sidebar">
-                <i className="ni ni-spaceship" />
-                Getting started
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://www.creative-tim.com/learning-lab/nextjs/colors/argon-dashboard?ref=njsad-admin-sidebar">
-                <i className="ni ni-palette" />
-                Foundation
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://www.creative-tim.com/learning-lab/nextjs/avatar/argon-dashboard?ref=njsad-admin-sidebar">
-                <i className="ni ni-ui-04" />
-                Components
-              </NavLink>
-            </NavItem>
-          </Nav>
-          <Nav className="mb-md-3" navbar>
-            <NavItem className="active-pro active">
-              <NavLink href="https://www.creative-tim.com/product/argon-dashboard-pro-react?ref=njsad-admin-sidebar">
-                <i className="ni ni-spaceship" />
-                Upgrade to PRO
-              </NavLink>
-            </NavItem>
-          </Nav>
+          
         </Collapse>
       </Container>
     </Navbar>
